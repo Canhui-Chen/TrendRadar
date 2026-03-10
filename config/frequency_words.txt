@@ -148,6 +148,17 @@
 # ───────────────────────────────────────────────────────────────
 
 [WORD_GROUPS]
+/原油|石油|油价|\bOil\b|\bCrude\b|\bWTI\b|\bBrent\b|\bOPEC\b/ => 原油
+
+/黄金|\bGold\b|\bXAU\b|\bBullion\b|金价/ => 黄金
+/银|白银|\bSilver\b|\bXAG\b|\bAg\b|银价/ => 白银
+
+
+/\bopenClaw\b/ => openClaw
+
+/黑神话|冯骥/ => 黑神话
+
+/腾讯|鹅厂|马化腾|微信|QQ|天美|阅文集团|微众银行|\bTencent\b|\bPony Ma\b|\bWeChat\b|\bLightSpeed\b|\bWeBank\b/ => 腾讯
 
 /qwen|minimax|glm/ => 国产开源模型
 
@@ -180,7 +191,6 @@
 [北美]
 美国
 加拿大
-美元
 
 [西欧]
 法国
@@ -198,3 +208,5 @@
 [AI 相关]
 /(?<![a-zA-Z])ai(?![a-zA-Z])/
 人工智能
+
+/芯片|半导体|\bChip\b|\bChips\b|\bSemiconductor\b|\bTSMC\b|\bNVIDIA\b|\bIntel\b|\bAMD\b/ => 半导体
