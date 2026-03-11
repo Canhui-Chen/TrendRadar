@@ -176,9 +176,22 @@ presets:
     # 时间段定义 ── 只有晚间汇总需要特殊处理
     periods:
       evening_summary:
+        name: "下午增量"
+        start: "15:00"
+        end: "18:00"
+        analyze: false              # 晚间做 AI 分析
+        ai_mode: "incremental"           # AI 也汇总全天内容
+        report_mode: "incremental"       # 切换为当日全部新闻汇总
+        once:
+          analyze: false            # 窗口内只分析一次
+          push: false               # 窗口内只推送一次
+
+    # 日计划 ── 把时间段组装成一天的安排
+        push: true
+      evening_summary_copy2:
         name: "晚间汇总"
-        start: "20:00"
-        end: "22:00"
+        start: "18:00"
+        end: "20:00"
         analyze: true              # 晚间做 AI 分析
         ai_mode: "daily"           # AI 也汇总全天内容
         report_mode: "daily"       # 切换为当日全部新闻汇总
@@ -187,9 +200,21 @@ presets:
           push: true               # 窗口内只推送一次
 
     # 日计划 ── 把时间段组装成一天的安排
+      evening_summary_copy:
+        name: "晚间增量"
+        start: "20:00"
+        end: "00:00"
+        analyze: false              # 晚间做 AI 分析
+        ai_mode: "incremental"           # AI 也汇总全天内容
+        report_mode: "incremental"       # 切换为当日全部新闻汇总
+        once:
+          analyze: false            # 窗口内只分析一次
+          push: false               # 窗口内只推送一次
+
+    # 日计划 ── 把时间段组装成一天的安排
     day_plans:
       all_day:
-        periods: ["evening_summary"]
+        periods: ["evening_summary", "evening_summary_copy2", "evening_summary_copy"]
 
     # 周映射 ── 每天用哪个日计划（1=周一 ... 7=周日）
     week_map:
