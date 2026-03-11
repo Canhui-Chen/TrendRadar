@@ -191,7 +191,7 @@ display:
     ai_analysis: false # AI 分析区域
   standalone:
     platforms: ["zhihu"] # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
-    rss_feeds: ["yahoo-finance","Bloomberg","Seeking Alpha","All News"] # RSS 源 ID 列表（如 ["hacker-news"]）
+    rss_feeds: ["yahoo-finance","Seeking Alpha","All News"] # RSS 源 ID 列表（如 ["hacker-news"]）
     max_items: 10                     # 每个源最多展示条数（0=不限制）
 
 
