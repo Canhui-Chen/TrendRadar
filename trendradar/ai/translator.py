@@ -48,7 +48,7 @@ class AITranslator:
 
         # 翻译配置
         self.enabled = translation_config.get("ENABLED", False)
-        self.target_language = translation_config.get("LANGUAGE", "English")
+        self.target_language = translation_config.get("LANGUAGE", "Chinese")
 
         # 创建 AI 客户端（基于 LiteLLM）
         self.client = AIClient(ai_config)
