@@ -135,18 +135,46 @@ presets:
     #
     # 语法提示：{} 是 YAML 的「空字典」写法，表示里面没有任何内容。
     # 等价于写成多行但什么都不填。后面的 [] 同理，表示「空列表」。
-    periods: {}
+    periods:
+      weekend:
+        name: "周末采集"
+        start: "00:00"
+        end: "18:59"
+        collect: true
+        analyze: false
+        push: false
+        report_mode: current
+        once:
+          analyze: true
+          push: true
+        ai_mode: current
+      weekend_analyze:
+        name: "周末分析"
+        start: "19:00"
+        end: "23:59"
+        collect: true
+        analyze: true
+        push: true
+        report_mode: daily
+        ai_mode: daily
+        once:
+          analyze: true
+          push: true
     day_plans:
       all_day:
         periods: []                   # 空列表 = 这天不启用任何时间段
+      weekend:
+        periods:
+          - weekend
+          - weekend_analyze
     week_map:
       1: "all_day"                 # 周一
       2: "all_day"                 # 周二
       3: "all_day"                 # 周三
       4: "all_day"                 # 周四
       5: "all_day"                 # 周五
-      6: "all_day"                 # 周六
-      7: "all_day"                 # 周日
+      6: "weekend"                 # 周六
+      7: "weekend"                 # 周日
 
 
   # ───────────────────────────────────────────────────────────
