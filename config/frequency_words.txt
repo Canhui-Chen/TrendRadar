@@ -153,15 +153,6 @@
 /黄金|\bGold\b|\bXAU\b|\bBullion\b|金价/ => 黄金
 /银|白银|\bSilver\b|\bXAG\b|\bAg\b|银价/ => 白银
 
-
-/\bopenClaw\b/ => openClaw
-
-/黑神话|冯骥/ => 黑神话
-
-/腾讯|鹅厂|马化腾|微信|QQ|天美|阅文集团|微众银行|\bTencent\b|\bPony Ma\b|\bWeChat\b|\bLightSpeed\b|\bWeBank\b/ => 腾讯
-
-/qwen|minimax|glm/ => 国产开源模型
-
 /特斯拉|马斯克|\bTesla\b|\bElon Musk\b|\bCybertruck\b|\bModel 3\b|\bModel Y\b|\bModel S\b|\bModel X\b|\bFSD\b/ => 特斯拉
 
 /英伟达|黄仁勋|\bNVIDIA\b|\bGeForce\b|\bRTX\b|\bCUDA\b|\bJensen Huang\b/ => 英伟达
@@ -202,8 +193,6 @@
 
 /俄罗斯|俄国/ => 俄罗斯
 
-印度
-
 
 # ═══════════════════════════════════════════════════════════════
 #                         科技领域
@@ -214,3 +203,5 @@
 人工智能
 
 /芯片|半导体|\bChip\b|\bChips\b|\bSemiconductor\b|\bTSMC\b|\bNVIDIA\b|\bIntel\b|\bAMD\b/ => 半导体
+
+/\bASTS\b|\bAST SpaceMobile\b|\bAbel Avellan\b|\bBlueWalker 3\b/ => ASTS
